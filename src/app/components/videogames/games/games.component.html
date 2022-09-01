@@ -1,0 +1,69 @@
+<h1>Video Juegos favoritos</h1>
+<div class="body">
+<div class="col-sm-2">
+  <label for="formGroupExampleInput" class="form-label">Nombre</label>
+  <input
+    [(ngModel)]="nameGame"
+    type="text"
+    class="form-control"
+    id="formGroupExampleInput"
+    placeholder="Juego"
+    [value]="defaultName"
+  />
+</div>
+<br />
+<div class="col-sm-2">
+  <label for="formGroupExampleInput2" class="form-label">{{ user }}</label>
+  <input
+    [(ngModel)]="user"
+    type="text"
+    class="form-control"
+    id="formGroupExampleInput2"
+    placeholder="Usuario"
+  />
+</div>
+<br />
+<div class="col-sm-2">
+  <label for="formGroupExampleInput2" class="form-label"
+    >Tipo de videojuego</label
+  >
+  <input
+    type="text"
+    class="form-control"
+    id="formGroupExampleInput2"
+    placeholder=""
+  />
+</div>
+<br />
+
+<button type="submit" class="btn btn-primary" (click)="onSendForm()">
+  Enviar Formulario
+</button>
+
+<button type="submit" class="btn btn-primary" (click)="ondefaultForm()">
+  Por defecto Formulario
+</button>
+<br />
+<hr />
+
+<p>{{ status }}</p>
+<!-- 
+<div *ngIf="displaygame; then showgame; else hidegame"></div> -->
+
+
+<div >
+  <ul class="list-group col-sm-2">
+  <li class="list-group-item" *ngFor="let a of names">
+    {{ a }}
+  </li>
+</ul>
+</div>
+
+</div>
+<ng-template #showgame>
+  <p>ghost the tsushima</p>
+</ng-template>
+
+<ng-template #hidegame>
+  <p>No muestro el videojuego</p>
+</ng-template>

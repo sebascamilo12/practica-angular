@@ -1,0 +1,10 @@
+.image-bg {
+    background-image:
+        url(https://www.trecebits.com/wp-content/uploads/2019/04/11854.jpg);
+    height: 120vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+}
